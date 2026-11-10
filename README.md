@@ -47,7 +47,3 @@ python -m http.server 8000
 
 - **Lora** — SIL Open Font License 1.1, текст лицензии: `fonts/OFL-Lora.txt`.
 - **Truetypewriter PolyglOTT** — лицензия: `fonts/LICENSE-Truetypewriter.txt`, copyright: `fonts/COPYRIGHT-Truetypewriter.txt`.
-
-## Исходники
-
-Прототипы, старые версии и исходный набор ассетов лежат вне репозитория, в папке `C:\Users\kola\Desktop\museum-source` на рабочем компьютере.
