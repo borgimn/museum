@@ -1264,7 +1264,7 @@ a {
   color: #EDECE7;
   transition: opacity 0.2s ease;
   font-style: italic;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-contact-row:hover {
