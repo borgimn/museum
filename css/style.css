@@ -1,0 +1,1760 @@
+/* ==========================================================================
+   Музей Боевой Славы им. И. А. Будая — Стили
+   Шрифты проекта: Truetypewriter PolyglOTT + Lora
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Truetypewriter';
+  src: url('../fonts/Truetypewriter PolyglOTT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg-cream: #EDECE7;
+  --red-terracotta: #944949;
+  --red-dark: #7a3535;
+  --red-title: #8B3E3E;
+  --red-paper: #8B3E3E;
+  --text-dark: #2B2320;
+  --text-muted: #5A4E48;
+  --text-white: #EDECE7;
+  --font-typewriter: 'Truetypewriter', 'Courier New', monospace;
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+  --container-width: 1376px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.14);
+  --body-size: clamp(20px, 2.36vw, 34px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  font-family: var(--font-serif);
+  font-size: var(--body-size);
+  font-style: italic;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Header & Banner (с эффектом оторванной бумаги)
+   ========================================================================== */
+.header-banner {
+  position: relative;
+  width: 100%;
+  min-height: 883px;
+  background-image: url('../assets/img/banner.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-color: #B98782;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 52px;
+  padding-bottom: 0;
+}
+
+.header-container {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.museum-logo {
+  display: inline-block;
+  margin-bottom: 112px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.museum-logo:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.museum-logo img {
+  width: 606px;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+}
+
+.header-quote {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 900px;
+  min-height: 150px;
+  margin-bottom: 140px;
+}
+
+.quote-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  opacity: 0.95;
+}
+
+.quote-icon.quote-start {
+  align-self: flex-start;
+  margin-top: -4px;
+}
+
+.quote-icon.quote-end {
+  align-self: flex-end;
+  margin-bottom: -4px;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(26px, 2.8vw, 40px);
+  line-height: 1.25;
+  color: #FFFFFF;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  text-align: center;
+}
+
+.quote-text strong {
+  font-weight: 700;
+  font-style: italic;
+  display: block;
+  letter-spacing: 0.3px;
+}
+
+.header-heroes-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.heroes-nav-title {
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-size: clamp(24px, 2.65vw, 38px);
+  letter-spacing: 4px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.heroes-buttons-row {
+  display: flex;
+  gap: 44px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-hero-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-size: clamp(18px, 1.9vw, 27px);
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  border: none;
+  background-color: transparent;
+  transition: all 0.25s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.btn-hero-nav:hover {
+  color: #FFFFFF;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.btn-hero-nav.active {
+  background-color: var(--red-terracotta);
+  padding: 12px 28px;
+  box-shadow: 0 4px 14px rgba(100, 30, 30, 0.4);
+}
+
+/* ==========================================================================
+   Main Content Layout
+   ========================================================================== */
+.main-wrapper {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 24px 24px 90px 24px;
+}
+
+.section-block {
+  margin-bottom: 90px;
+}
+
+.section-block:last-child {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  color: var(--red-title);
+  font-size: clamp(32px, 5vw, 72px);
+  line-height: 1.14;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 38px;
+  font-weight: normal;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+.subhead-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(23px, 2.4vw, 34px);
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   Paper Parchment Cards
+   ========================================================================== */
+.paper-card {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--red-paper);
+  font-size: var(--body-size);
+  line-height: 1.45;
+}
+
+.paper-card strong,
+.paper-card b {
+  font-weight: 600;
+  color: var(--red-paper);
+}
+
+.paper-card.home-foundation {
+  background-image: url('../assets/img/home/paper_1.png');
+  width: 100%;
+  min-height: 330px;
+  padding: 44px 52px;
+  text-align: center;
+}
+
+.paper-card.home-foundation .date-badge {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(28px, 2.8vw, 40px);
+  font-weight: 600;
+  color: var(--red-paper);
+  margin-bottom: 12px;
+}
+
+.paper-card.home-foundation .desc {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--body-size);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--red-paper);
+}
+
+/* Budai paper cards */
+.paper-card.budai-p1 {
+  background-image: url('../assets/img/budai/paper_1.png');
+  min-height: 260px;
+  padding: 36px 48px;
+  margin-top: 16px;
+  text-align: center;
+  font-size: var(--body-size);
+}
+
+.paper-card.budai-p2 {
+  background-image: url('../assets/img/budai/paper_2.png');
+  min-height: 700px;
+  padding: 48px 46px;
+  font-size: var(--body-size);
+  line-height: 1.45;
+}
+
+.paper-card.budai-p3 {
+  background-image: url('../assets/img/budai/paper_3.png');
+  width: 100%;
+  min-height: 380px;
+  padding: 50px 58px;
+  margin: 34px 0;
+  font-size: var(--body-size);
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* Aleksandrov paper cards */
+.paper-card.alek-p1 {
+  background-image: url('../assets/img/aleksandrov/paper_1.png');
+  width: 100%;
+  min-height: 320px;
+  padding: 46px 66px;
+  margin: 30px 0;
+  font-size: var(--body-size);
+  line-height: 1.45;
+  text-align: center;
+}
+
+.paper-card.alek-p2 {
+  background-image: url('../assets/img/aleksandrov/paper_2.png');
+  width: 100%;
+  min-height: 320px;
+  padding: 46px 66px;
+  margin: 30px 0;
+  font-size: var(--body-size);
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Home Page Specific Sections
+   ========================================================================== */
+.foundation-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.founder-row {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.founder-photo {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.founder-photo:hover {
+  transform: scale(1.02);
+}
+
+.founder-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+}
+
+.founder-info p {
+  font-size: var(--body-size);
+  line-height: 1.45;
+  color: var(--text-dark);
+  max-width: 600px;
+}
+
+.founder-info strong {
+  font-weight: 600;
+}
+
+.btn-bio-torn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assets/img/home/button_bio_budai.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 590px;
+  max-width: 100%;
+  height: 68px;
+  color: #FFFFFF;
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-size: clamp(20px, 2.1vw, 30px);
+  letter-spacing: 1px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 12px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-bio-torn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08);
+}
+
+/* Sections of Exposition — расположение как в прототипе */
+.exposition-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 44px 0;
+}
+
+.expo-item {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.36vw, 34px);
+  font-style: italic;
+  font-weight: 400;
+  color: #2D2421;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 760px;
+}
+
+.exposition-grid > .expo-item:nth-child(odd) {
+  align-self: flex-start;
+  margin-left: 52px;
+}
+
+.exposition-grid > .expo-item:nth-child(even) {
+  align-self: flex-end;
+  margin-right: 8px;
+}
+
+.expo-item.pill-link {
+  display: inline-flex;
+  padding: 12px 28px;
+  border: 1.5px solid var(--red-title);
+  border-radius: 30px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.expo-item.pill-link:hover {
+  background-color: var(--red-terracotta);
+  border-color: var(--red-terracotta);
+  color: #FFFFFF;
+}
+
+/* Museum Purpose */
+.purpose-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.purpose-text-col .section-title {
+  margin-bottom: 26px;
+}
+
+.purpose-text {
+  font-size: var(--body-size);
+  line-height: 1.45;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.gymnasium-photo {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gymnasium-photo:hover {
+  transform: scale(1.02);
+}
+
+/* Work Directions */
+.directions-block {
+  margin-top: 30px;
+}
+
+.direction-row {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+.direction-text {
+  font-size: var(--body-size);
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.direction-now-wrapper {
+  margin-top: 40px;
+}
+
+.direction-now-wrapper .direction-text {
+  margin-bottom: 30px;
+}
+
+/* Блок «Беларусь помнит» */
+.belarus-block {
+  margin-top: 10px;
+  padding-left: 22px;
+}
+
+.belarus-head {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 34px;
+}
+
+.belarus-logo {
+  width: 305px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.belarus-quote {
+  font-size: var(--body-size);
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+.belarus-text {
+  font-size: var(--body-size);
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   Carousels (Sliders)
+   ========================================================================== */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  cursor: zoom-in;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide img:hover {
+  transform: scale(1.015);
+}
+
+.carousel-wrapper[data-carousel="directions-past"] .carousel-slide img {
+  height: 300px;
+}
+
+/* Нижняя карусель на главной — две фотографии в полный размер */
+.carousel-wrapper[data-carousel="directions-now"] {
+  border-radius: 0;
+  overflow: visible;
+}
+
+.carousel-wrapper[data-carousel="directions-now"] .carousel-viewport {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.carousel-slide.double-slide {
+  display: grid;
+  grid-template-columns: var(--pair-cols, 1fr 1fr);
+  gap: 24px;
+  align-items: stretch;
+  height: 620px;
+}
+
+.carousel-slide.double-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-lg);
+}
+
+.carousel-slide.double-slide.is-single {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background-color: transparent;
+}
+
+.carousel-slide.double-slide.is-single img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(43, 35, 32, 0.55);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.25s ease, background-color 0.25s ease;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+}
+
+.carousel-wrapper:hover .carousel-btn,
+.carousel-wrapper:focus-within .carousel-btn {
+  opacity: 1;
+}
+
+.carousel-btn:hover {
+  background-color: var(--red-terracotta);
+  border-color: #FFFFFF;
+}
+
+.carousel-btn.prev {
+  left: 16px;
+}
+
+.carousel-btn.next {
+  right: 16px;
+}
+
+.carousel-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.carousel-dots {
+  display: none;
+}
+
+/* ==========================================================================
+   Biography Pages Styles (Budai & Aleksandrov)
+   ========================================================================== */
+.bio-top-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 52px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.bio-portrait {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.bio-portrait:hover {
+  transform: scale(1.02);
+}
+
+.bio-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bio-paragraphs p {
+  font-size: var(--body-size);
+  line-height: 1.55;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.bio-paragraphs strong {
+  font-weight: 600;
+}
+
+.two-col-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.two-col-layout--text-wide {
+  grid-template-columns: 1.55fr 1fr;
+}
+
+.photo-caption-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.photo-caption-block img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo-caption-block img:hover {
+  transform: scale(1.02);
+}
+
+.photo-caption-block .caption-text {
+  font-size: clamp(21px, 2.1vw, 30px);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--red-paper);
+  line-height: 1.4;
+}
+
+/* Две фотографии рядом, как в прототипе */
+.duo-photo-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.duo-photo-row img {
+  height: 460px;
+  width: auto;
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  object-fit: contain;
+}
+
+/* Фото с подписью сбоку */
+.photo-side-caption {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 44px;
+  align-items: center;
+  margin: 34px 0;
+}
+
+.photo-side-caption img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+}
+
+.photo-side-caption .caption-text {
+  font-size: clamp(21px, 2.1vw, 30px);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--red-paper);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.photo-side-caption--wide {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+/* Удостоверение главного онколога */
+.certificate-block {
+  max-width: 1020px;
+  margin: 34px auto;
+}
+
+.certificate-block img {
+  width: 100%;
+  height: auto;
+}
+
+/* Две фотографии с одинаковой высотой */
+.photo-grid-2col.photos-equal {
+  grid-template-columns: 587fr 673fr;
+  align-items: start;
+}
+
+.photo-grid-2col.photos-equal .photo-caption-block {
+  margin: 0;
+}
+
+.photo-grid-2col.photos-equal .photo-caption-block img {
+  width: 100%;
+  height: 435px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Timeline Activity */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  margin: 44px 0;
+  max-width: 100%;
+  text-align: left;
+}
+
+.timeline-item-title {
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-size: clamp(27px, 2.65vw, 38px);
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.timeline-item-desc {
+  font-size: var(--body-size);
+  line-height: 1.5;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+/* Photo Grids */
+.photo-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 40px 0;
+  align-items: start;
+}
+
+.photo-grid-2x2 img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.photo-grid-2x2 img:hover {
+  transform: scale(1.025);
+}
+
+/* Мозаика из четырёх фото (страница Будая) */
+.photo-grid-mosaic {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin: 40px auto;
+  max-width: 1130px;
+  align-items: start;
+}
+
+.photo-grid-mosaic img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.photo-grid-mosaic img:hover {
+  transform: scale(1.02);
+}
+
+.photo-grid-mosaic img:nth-child(1) { grid-column: span 2; }
+.photo-grid-mosaic img:nth-child(2) { grid-column: span 4; }
+.photo-grid-mosaic img:nth-child(3) { grid-column: span 4; }
+.photo-grid-mosaic img:nth-child(4) { grid-column: span 2; }
+
+.photo-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 40px 0;
+  align-items: start;
+}
+
+.photo-grid-2col img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.photo-grid-2col img:hover {
+  transform: scale(1.025);
+}
+
+/* Awards block */
+.awards-block {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.awards-subtitle {
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-weight: normal;
+  font-size: clamp(27px, 2.65vw, 38px);
+  color: var(--text-dark);
+  margin-top: 38px;
+  margin-bottom: 14px;
+}
+
+.awards-text {
+  font-size: var(--body-size);
+  line-height: 1.55;
+  color: var(--text-dark);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.awards-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-style: italic;
+}
+
+.awards-list li {
+  font-size: var(--body-size);
+  line-height: 1.55;
+}
+
+.awards-list strong {
+  font-weight: 600;
+}
+
+/* Single large featured photo */
+.featured-single-photo {
+  max-width: 840px;
+  margin: 38px auto;
+  text-align: center;
+}
+
+.featured-single-photo--full {
+  max-width: 100%;
+}
+
+.featured-single-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.featured-single-photo img:hover {
+  transform: scale(1.01);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  width: 100%;
+  min-height: 780px;
+  background-image: url('../assets/img/footer.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-color: var(--red-terracotta);
+  color: #EDECE7;
+  padding-top: 78px;
+  padding-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1376px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+
+.footer-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.footer-left-col .museum-logo {
+  margin-bottom: 0;
+}
+
+.footer-left-col .museum-logo img {
+  width: 600px;
+  max-width: 100%;
+}
+
+.footer-map-frame {
+  width: 100%;
+  max-width: 494px;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+  background-image: url('../assets/img/map.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.footer-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: clamp(18px, 1.65vw, 24px);
+  line-height: 1.45;
+  color: #EDECE7;
+  max-width: 494px;
+  text-align: left;
+  font-style: italic;
+}
+
+.footer-address img {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 26px;
+}
+
+.footer-nav-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-block-title {
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-size: clamp(27px, 2.65vw, 38px);
+  letter-spacing: 2px;
+  color: #EDECE7;
+  text-transform: uppercase;
+}
+
+.footer-hero-links {
+  display: flex;
+  gap: 34px;
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-size: clamp(19px, 1.85vw, 27px);
+  letter-spacing: 1px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-hero-links a {
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-hero-links a:hover {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+.footer-contacts-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-contacts-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(17px, 1.5vw, 21px);
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+  color: #EDECE7;
+  font-weight: 500;
+  font-style: italic;
+  max-width: 540px;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 380px;
+  font-size: clamp(18px, 1.65vw, 24px);
+  color: #EDECE7;
+  transition: opacity 0.2s ease;
+  font-style: italic;
+  text-align: left;
+}
+
+.footer-contact-row:hover {
+  opacity: 0.85;
+}
+
+.footer-contact-row img {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.footer-welcome-msg {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 1.65vw, 24px);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: #EDECE7;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-family: var(--font-typewriter);
+  font-style: normal;
+  font-size: clamp(22px, 2.5vw, 36px);
+  letter-spacing: 1px;
+  color: #EDECE7;
+  margin-top: 30px;
+}
+
+/* ==========================================================================
+   Lightbox Modal
+   ========================================================================== */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+  margin-top: 16px;
+  font-size: 22px;
+  color: #FFFFFF;
+  text-align: center;
+  font-style: italic;
+  max-width: 800px;
+}
+
+.lightbox-caption:empty {
+  display: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .header-banner {
+    min-height: 760px;
+    padding-top: 42px;
+  }
+  .museum-logo {
+    margin-bottom: 80px;
+  }
+  .header-quote {
+    margin-bottom: 100px;
+  }
+  .main-wrapper {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: clamp(32px, 5vw, 56px);
+  }
+  .foundation-grid,
+  .founder-row,
+  .purpose-grid,
+  .direction-row,
+  .bio-top-grid,
+  .two-col-layout,
+  .photo-grid-2x2,
+  .photo-grid-2col,
+  .photo-side-caption,
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .founder-photo {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .founder-info {
+    max-width: 100%;
+  }
+  .founder-info p {
+    max-width: 100%;
+  }
+  .bio-portrait {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .paper-card.home-foundation,
+  .paper-card.budai-p1,
+  .paper-card.budai-p2,
+  .paper-card.budai-p3,
+  .paper-card.alek-p1,
+  .paper-card.alek-p2 {
+    background-size: cover;
+    border-radius: var(--radius-md);
+  }
+  .photo-grid-2col.photos-equal {
+    grid-template-columns: 1fr;
+  }
+  .photo-grid-2col.photos-equal .photo-caption-block img {
+    height: auto;
+  }
+  .exposition-grid > .expo-item:nth-child(odd) {
+    margin-left: 24px;
+  }
+  .exposition-grid > .expo-item:nth-child(even) {
+    margin-right: 0;
+    align-self: flex-end;
+  }
+  .photo-grid-mosaic {
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo-grid-mosaic img:nth-child(n) {
+    grid-column: span 1;
+  }
+  .carousel-slide.double-slide {
+    height: 460px;
+  }
+  .footer-left-col {
+    order: 0;
+  }
+  .footer-right-col {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --body-size: 20px;
+  }
+  .header-banner {
+    min-height: 640px;
+    padding-top: 30px;
+    background-size: cover;
+  }
+  .header-container {
+    padding: 0 18px;
+  }
+  .museum-logo {
+    margin-bottom: 40px;
+  }
+  .museum-logo img {
+    width: 340px;
+  }
+  .header-quote {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 52px;
+    max-width: 100%;
+  }
+  .quote-text {
+    font-size: 23px;
+  }
+  .quote-icon {
+    display: none;
+  }
+  .header-heroes-nav {
+    gap: 14px;
+  }
+  .heroes-nav-title {
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+  .btn-hero-nav {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  .btn-hero-nav.active {
+    padding: 9px 20px;
+  }
+  .heroes-buttons-row {
+    gap: 18px;
+  }
+  .main-wrapper {
+    padding: 30px 18px 60px;
+  }
+  .section-block {
+    margin-bottom: 60px;
+  }
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+  .subhead-title {
+    font-size: 24px;
+  }
+  .paper-card.home-foundation,
+  .paper-card.budai-p1,
+  .paper-card.budai-p2,
+  .paper-card.budai-p3,
+  .paper-card.alek-p1,
+  .paper-card.alek-p2 {
+    padding: 34px 26px;
+    min-height: 0;
+  }
+  .paper-card.home-foundation .desc,
+  .paper-card.home-foundation .date-badge {
+    font-size: 20px;
+  }
+  .paper-card.budai-p1,
+  .paper-card.budai-p2,
+  .paper-card.budai-p3,
+  .paper-card.alek-p1,
+  .paper-card.alek-p2 {
+    font-size: 20px;
+  }
+  .exposition-grid {
+    gap: 18px;
+    margin: 30px 0;
+  }
+  .exposition-grid > .expo-item:nth-child(odd),
+  .exposition-grid > .expo-item:nth-child(even) {
+    align-self: stretch;
+    margin: 0;
+    max-width: 100%;
+  }
+  .expo-item {
+    font-size: 21px;
+    width: 100%;
+  }
+  .expo-item.pill-link {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  .founder-row {
+    gap: 24px;
+  }
+  .founder-info p {
+    font-size: 20px;
+  }
+  .btn-bio-torn {
+    width: 100%;
+    font-size: 16px;
+    height: 52px;
+  }
+  .direction-row {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .direction-text,
+  .purpose-text {
+    font-size: 21px;
+  }
+  .carousel-slide img {
+    height: 240px;
+  }
+  .carousel-wrapper[data-carousel="directions-past"] .carousel-slide img {
+    height: 230px;
+  }
+  .carousel-slide.double-slide {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    height: auto;
+    gap: 16px;
+  }
+  .carousel-slide.double-slide img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+  .carousel-slide.double-slide.is-single img {
+    width: 100%;
+    height: auto;
+  }
+  .carousel-btn {
+    opacity: 0.85;
+    width: 38px;
+    height: 38px;
+  }
+  .carousel-btn.prev {
+    left: 8px;
+  }
+  .carousel-btn.next {
+    right: 8px;
+  }
+  .bio-top-grid {
+    gap: 24px;
+  }
+  .bio-paragraphs p {
+    font-size: 20px;
+  }
+  .two-col-layout {
+    gap: 24px;
+  }
+  .photo-grid-2x2,
+  .photo-grid-2col,
+  .photo-grid-mosaic {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .photo-grid-mosaic img:nth-child(n) {
+    grid-column: span 1;
+  }
+  .duo-photo-row {
+    gap: 14px;
+  }
+  .duo-photo-row img {
+    height: auto;
+    width: 100%;
+  }
+  .photo-side-caption {
+    gap: 18px;
+  }
+  .photo-side-caption--wide {
+    grid-template-columns: 1fr;
+  }
+  .photo-grid-2col.photos-equal {
+    grid-template-columns: 1fr;
+  }
+  .photo-grid-2col.photos-equal .photo-caption-block img {
+    height: auto;
+  }
+  .belarus-block {
+    padding-left: 0;
+  }
+  .belarus-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .belarus-logo {
+    width: 230px;
+  }
+  .belarus-quote,
+  .belarus-text {
+    font-size: 20px;
+  }
+  .certificate-block {
+    margin: 24px auto;
+  }
+  .photo-caption-block .caption-text,
+  .photo-side-caption .caption-text {
+    font-size: 20px;
+  }
+  .timeline-list {
+    gap: 26px;
+  }
+  .timeline-item-title {
+    font-size: 27px;
+  }
+  .awards-subtitle {
+    font-size: 27px;
+  }
+  .awards-list li,
+  .awards-text {
+    font-size: 20px;
+  }
+  .site-footer {
+    min-height: 0;
+    padding-top: 54px;
+    padding-bottom: 34px;
+    background-size: cover;
+  }
+  .footer-container {
+    padding: 0 18px;
+  }
+  .footer-main-grid {
+    gap: 38px;
+    margin-top: 10px;
+  }
+  .footer-left-col {
+    gap: 24px;
+  }
+  .footer-left-col .museum-logo img {
+    width: 320px;
+  }
+  .footer-map-frame {
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+  }
+  .footer-address {
+    font-size: 18px;
+    max-width: 100%;
+  }
+  .footer-block-title {
+    font-size: 27px;
+  }
+  .footer-hero-links {
+    gap: 22px;
+    font-size: 19px;
+  }
+  .footer-contacts-sub {
+    font-size: 17px;
+  }
+  .footer-contact-row {
+    font-size: 18px;
+    max-width: 340px;
+  }
+  .footer-welcome-msg {
+    font-size: 18px;
+  }
+  .footer-copyright {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .lightbox-caption {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-banner {
+    min-height: 600px;
+  }
+  .museum-logo img {
+    width: 280px;
+  }
+  .quote-text {
+    font-size: 20px;
+  }
+  .heroes-nav-title {
+    font-size: 22px;
+  }
+  .btn-hero-nav {
+    font-size: 16px;
+  }
+  .section-title {
+    font-size: 27px;
+  }
+  .footer-hero-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
